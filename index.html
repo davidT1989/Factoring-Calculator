@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Factoring Calculator</title>
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="BigInteger.js"></script>
+	<script src="algebrite.bundle-for-browser.js"></script>
+	<script src="algebrite.js"></script>
+  <script src="fraction.js"></script>  
+  <script src="polynomial.js"></script>
+  <script src="solve.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+          <h1>Welcome to Factoring Calculator!</h1>
+          <h4>What do you want to calculate?</h4>
+          <h5>Try this:x^2-5x+4!<br/> To use parenthesis, try (x+1)*(x-2)-4!</h5>
+          <input type="text" class="type" placeholder="Please enter your equation." id="poly">
+          <button onclick="calculate()">Calculate</button>          
+      </div>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+      <div  class="col-lg-6">
+          <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#home">Simplify</a></li>
+              <li><a data-toggle="tab" href="#menu1">Factor</a></li>
+              <li><a data-toggle="tab" href="#menu2">Evaluate</a></li>
+          </ul>
+          
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+            <h3>Simplify</h3>
+                Let's Simplify!
+                <div id="output"></div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              <h3>Factor</h3>
+              <p>Let's factorize the polynomial.</p>
+              <div id="factorized"></div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+              <h3>Evaluate</h3>
+              <p>Enter a number for each variable.</p>
+              <div id="origin"></div>
+              <label>x=</label>
+              <input type="text" class="type" id="variable" placeholder="Default vaule is zero.">
+              <button onclick="eval()">Evaluate</button>
+              <div id="evaloutput"></div>
+            </div>              
+          </div>
+      </div>
+    </div>
+  </div>    
+</body>
+</html>
